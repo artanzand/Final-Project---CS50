@@ -1,0 +1,84 @@
+{% extends "layout.html" %}
+
+{% block main %}
+    <h2>You are legally required to immediately self-isolate. You are recommended to be tested for COVID-19.</h2>
+    <ul>
+        <li>If you DO NOT get tested, you must isolate for 10 days from the onset of symptoms AND until symptoms have resolved (whichever is latest).</li>
+        <li>Individuals who are tested, MUST isolate pending their results and should visit ahs.ca/results for further information regarding the next steps they must take following their test results.</li>
+    </ul>
+
+    <p>Call 911 if you are seriously ill and need immediate medical attention. Inform them that you may have COVID-19.</p>
+
+    <button type="button" class="btn btn-secondary">ACTION: Please fill in and submit the following information to proceed with booking a COVID-19 test.</button>
+    <p></p>
+    <h4>IMPORTANT</h4>
+    <p>The current scheduling is available for <strong>Calgary, Alberta only</strong>. Based on your current location the closest testing facility is <strong>Richmond Road Diagnostic and Imaging Centre (RRDTC)</strong>. Alternative locations are provided below.</p>
+
+
+    <div class="accordion accordion-flush" id="accordionFlushExample">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingOne">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+            Richmond Road Drive Thru
+          </button>
+        </h2>
+        <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body"><p>Address: 1820 Richmond Rd SW Calgary, AB T2T 5C7</p><p><a href="https://www.google.com/maps/dir/Calgary,+AB+T2G+1E1/1820+Richmond+Rd+SW,+Calgary,+AB+T2T+5C7/@51.0425569,-114.1216393,13z/data=!3m1!4b1!4m13!4m12!1m5!1m1!1s0x537170038f782785:0xe1188f8aab7c8fd0!2m2!1d-114.0595999!2d51.0399513!1m5!1m1!1s0x53716fd5b4b19429:0x9b2584c47e6eceef!2m2!1d-114.1097551!2d51.0369488">GET DIRECTION</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingTwo">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+            Chestermere Walk Up
+          </button>
+        </h2>
+        <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body"><p>Address: 288 Kinniburgh Blvd #104, Chestermere, AB T1X 0V8</p><p><a href="https://www.google.com/maps/place/Alberta+Health+Services/@51.0224306,-113.8105143,18.58z/data=!4m5!3m4!1s0x53717dcebff7669d:0xf202f9a02ade9c0!8m2!3d51.0224519!4d-113.8097783">GET DIRECTION</a></div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingThree">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+            Deerfoot North Drive Thru
+          </button>
+        </h2>
+        <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body"><p>Address: 911 32 Ave NE Calgary, AB T2E 6X6</p><p><a href="https://www.google.com/maps/place/911+32+Ave+NE,+Calgary,+AB+T2E+6X6/@51.0622312,-114.0563394,14z/data=!4m21!1m15!4m14!1m6!1m2!1s0x537170038f782785:0xe1188f8aab7c8fd0!2sCalgary,+AB+T2G+1E1!2m2!1d-114.0595999!2d51.0399513!1m6!1m2!1s0x537165126be23741:0x67e94198419c4bcc!2s911+32+Ave+NE,+Calgary,+AB+T2E+6X6!2m2!1d-114.0431659!2d51.0806568!3m4!1s0x537165126be23741:0x67e94198419c4bcc!8m2!3d51.0806568!4d-114.0431659">GET DIRECTION</a></div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <p>To receive notification of your COVID-19 test result and other information about your health relating to COVID-19 from AHS through text message, please provide your phone number below.
+    By submitting your phone number you are providing your consent to be contacted by us via text message.</p>
+
+    <form action="/schedule" method="post">
+        <h6>Phone Number</h6>
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="phone" placeholder="111-111-1111" type="number">
+        </div>
+        <p></p>
+        <div class="form-group">
+            <h6>Preferred Testing Facility</h6>
+            <select class="form-control" name= "location" placeholder="Preferred Testing Facility">
+                <option value="Richmond Road Drive Thru" selected>Richmond Road Drive Thru</option>
+                <option value="Chestermere Walk Up">Chestermere Walk Up</option>
+                <option value="Deerfoot North Drive Thru">Deerfoot North Drive Thru</option>
+            </select>
+        </div>
+        <p></p>
+        <div class="form-group">
+            <h6>Calendar Day</h6>
+            <select class="form-control" name= "day" placeholder="Preferred Testing Facility">
+                {% for day in days %}
+                <option value="{{ day }}">{{ day }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <p></p>
+        <button class="btn btn-primary" type="submit">Continue</button>
+    </form>
+
+{% endblock %}
