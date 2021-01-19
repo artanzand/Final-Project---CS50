@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block main %}
+    <form action="/login" method="post">
+        <h6>Your first and last name separated by space</h6>
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="name" placeholder="Full Name" type="text">
+        </div>
+        <p></p>
+        <h6>Your unique AHN</h6>
+        <div class="form-group">
+            <input class="form-control" name="id" placeholder="Alberta Health Number" type="number">
+        </div>
+        <p></p>
+        <button class="btn btn-primary" type="submit">Log In</button>
+    </form>
+{% endblock %}
