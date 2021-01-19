@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block main %}
+    <form action="/modify" method="post">
+        <h6>Insert the provided Booking Code here</h6>
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="hash" placeholder="Booking Code" type="text">
+        </div>
+        <p></p>
+        <h6>Modify or Cancel Appointment - Please select one</h6>
+            <select class="form-control" name= "action" placeholder="Action">
+                <option value="cancel">Cancel</option>
+                <option value="modify">Modify</option>
+            </select>
+        <p></p>
+        <button class="btn btn-primary" type="submit">confirm</button>
+    </form>
+{% endblock %}
