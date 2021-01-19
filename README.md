@@ -1,4 +1,5 @@
 Title: COVID-19 Testing – Online Booking Website Name: Artan Zandian Calgary, Alberta, Canada Dec 2020
+See below for presentation: https://youtu.be/VdjYeRtxZYI
 
 Languages used: Python, SQL, HTML, JavaScript, CSS
 
@@ -15,5 +16,3 @@ The patient needs to be logged in to get access to the first two steps. To acces
 No registration is required to book an appointment. This website takes benefit from presence of a unique identifier call Alberta Health Number (AHN). AHN is an ID given to anyone who is born in Alberta or immigrates to the province within two-weeks of arrival. In absence of access to this database and for demonstration purposes, the people database has been downloaded from imdb and has been modified to reflect the minimum data required. The size of the database is roughly over a million entries which is about the size of the population in Calgary, AB.
 
 Last but not the least, the website is set up to run in different sessions allowing for multiple patients to book appointments at the same time.
-
-See below for presentation: https://youtu.be/VdjYeRtxZYI
