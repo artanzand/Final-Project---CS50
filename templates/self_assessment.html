@@ -1,0 +1,60 @@
+{% extends "layout.html" %}
+
+{% block main %}
+    <div class="accordion" id="accordionExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingOne">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        Self-assessment
+      </button>
+    </h2>
+    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <h4>COVID-19 Self-Assessment for Albertans</h4>
+            Use this self-assessment tool to help determine whether you need to be tested for COVID-19. You can complete this assessment for yourself or on behalf of someone else, if they are not able.
+            <form action="/questionnaire" method="get">
+                <button class="btn btn-primary" type="submit">Go to Self-assessment</button>
+            </form>
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingTwo">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+        Disclaimer
+      </button>
+    </h2>
+    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <p>The COVID-19 test detects if the virus is in your nose or throat. Testing will tell you whether you have COVID-19 at the time of your test, even if you are not showing symptoms.</p>
+
+        <p>It is important that you understand what to do while you await your tests results, and what it means if your COVID-19 test is positive or negative.</p>
+
+        <p>You are <strong>legally required</strong> to self-isolate for any of the following reasons:</p>
+        <ul>
+          <li>you test positive for COVID-19.</li>
+          <li>you have a cough, fever, shortness of breath, runny nose, or sore throat (for adults) or cough, fever, shortness of breath (for children) that is <strong>not related</strong> to a pre-existing illness or health condition and you have not been tested or are awaiting test results.</li>
+          <li>you are a close contact of someone known to have COVID-19.</li>
+          <li>you have returned from travel outside Canada within the last 14 days.</li>
+        </ul>
+
+        <p>If you are a close contact of a case, or returned from travel outside of Canada in the last 14 days, you must continue to self-isolate for the full 14 days, even if you have a negative test result.</p>
+
+        <p>You <strong>do not</strong> have to self-isolate if any of the following apply, AND you are not a close contact of a case or returned from travel outside of Canada in the last 14 days:</p>
+        <ul>
+          <li>you have symptoms of illness that are related to a pre-existing illness or health condition.</li>
+          <li>you have tested negative for COVID-19.</li>
+          <li>you have tested negative for COVID-19 and have a cough, fever, shortness of breath, runny nose, or sore throat that is not related to a pre-existing illness or health condition. We do always suggest you stay home when sick with any illness, until symptoms resolve; however, if your COVID test is negative, this is not legally required.</li>
+        </ul>
+
+        <p>For complete isolation requirement details, including minimum isolation periods, please visit: <a href="https://www.alberta.ca/isolation.aspx">https://www.alberta.ca/isolation.aspx</a></p>
+
+        <p>Remember to continue to practice physical distancing, frequent hand washing, and to stay home when sick.</p>
+        <form action="/questionnaire" method="get">
+            <button class="btn btn-primary" type="submit">Go to Self-assessment</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
