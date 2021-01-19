@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+
+{% block main %}
+    <form action="/times" method="post">
+        Here are the time options for <strong>{{ location }}</strong> on <strong>{{ day }}</strong>.
+        <p></p>
+        <div class="form-group">
+            <h6>Please select one</h6>
+            <select class="form-control" name= "time" placeholder="Times">
+                {% for time in times %}
+                <option value="{{ time }}">{{ time }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <p></p>
+        <button class="btn btn-primary" type="submit">Confirm</button>
+    </form>
+
+    The options don't work for you? <a href="/schedule">Go Back</a> to change location or day.
+{% endblock %}
