@@ -1,0 +1,112 @@
+{% extends "layout.html" %}
+
+{% block main %}
+    <h3>In the past 10 days, have you experienced any of the following:</h3>
+    <form action="/questionnaire" method="post">
+        <div class="form-group">
+            <ul>
+                <p><li>
+                    fever
+                    <select name= "fever" placeholder="Y/N">
+                      <option value="yes">Yes</option>
+                      <option value="no" selected>No</option>
+                    </select>
+                </li></p>
+                <p><li>
+                    new onset of cough or worsening of chronic cough
+                    <select name= "cough" placeholder="Y/N">
+                      <option value="yes">Yes</option>
+                      <option value="no" selected>No</option>
+                    </select>
+                </li></p>
+                <p><li>
+                    new or worsening shortness of breath
+                    <select name= "breath_short" placeholder="Y/N">
+                      <option value="yes">Yes</option>
+                      <option value="no" selected>No</option>
+                    </select>
+                </li></p>
+                <p><li>
+                    new or worsening difficulty breathing
+                    <select name= "breath_diff" placeholder="Y/N">
+                      <option value="yes">Yes</option>
+                      <option value="no" selected>No</option>
+                    </select>
+                </li></p>
+                <p><li>
+                    sore throat
+                    <select name= "sore_throat" placeholder="Y/N">
+                      <option value="yes">Yes</option>
+                      <option value="no" selected>No</option>
+                    </select>
+                </li></p>
+                <p><li>
+                    runny nose
+                    <select name= "runny_nose" placeholder="Y/N">
+                      <option value="yes">Yes</option>
+                      <option value="no" selected>No</option>
+                    </select>
+                </li></p>
+                <p><li>
+                    chills
+                    <select name= "chills" placeholder="Y/N">
+                      <option value="yes">Yes</option>
+                      <option value="no" selected>No</option>
+                    </select>
+                </li></p>
+                <p><li>
+                    painful swallowing
+                    <select name= "swallow" placeholder="Y/N">
+                      <option value="yes">Yes</option>
+                      <option value="no" selected>No</option>
+                    </select>
+                </li></p>
+                <p><li>
+                    stuffy nose
+                    <select name= "stuffy_nose" placeholder="Y/N">
+                      <option value="yes">Yes</option>
+                      <option value="no" selected>No</option>
+                    </select>
+                </li></p>
+                <p><li>
+                    headache
+                    <select name= "headache" placeholder="Y/N">
+                      <option value="yes">Yes</option>
+                      <option value="no" selected>No</option>
+                    </select>
+                </li></p>
+                <p><li>
+                    feeling unwell, fatigue or severe exhaustion
+                    <select name= "fatigue" placeholder="Y/N">
+                      <option value="yes">Yes</option>
+                      <option value="no" selected>No</option>
+                    </select>
+                </li></p>
+                <p><li>
+                    nausea, vomiting, diarrhea or unexplained loss of appetite
+                    <select name= "nausea" placeholder="Y/N">
+                      <option value="yes">Yes</option>
+                      <option value="no" selected>No</option>
+                    </select>
+                </li></p>
+                <p><li>
+                    loss of sense of smell or taste
+                    <select name= "senses" placeholder="Y/N">
+                      <option value="yes">Yes</option>
+                      <option value="no" selected>No</option>
+                    </select>
+                </li></p>
+                <p><li>
+                    conjunctivitis (pink eye)
+                    <select name= "pink_eye" placeholder="Y/N">
+                      <option value="yes">Yes</option>
+                      <option value="no" selected>No</option>
+                    </select>
+                </li></p>
+            </ul>
+
+        </div>
+
+        <button class="btn btn-primary" type="submit">Submit</button>
+    </form>
+{% endblock %}
