@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block main %}
+    <h1>COVID-19 Testing / Online Booking</h1>
+
+    <!-- JS list -->
+        <div class="row">
+          <div class="col-4">
+            <div class="list-group" id="list-tab" role="tablist">
+              <a class="list-group-item list-group-item-action active" id="list-home-list" data-bs-toggle="list" href="#list-home" role="tab" aria-controls="home">Modify Appointments</a>
+              <a class="list-group-item list-group-item-action" id="list-profile-list" data-bs-toggle="list" href="#list-profile" role="tab" aria-controls="profile">Book Appointments</a>
+            </div>
+          </div>
+          <div class="col-8">
+            <div class="tab-content" id="nav-tabContent">
+              <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
+                <h3>Change or Cancel Your COVID-19 Test Appointment</h3>
+                    <p>If you have already booked a COVID-19 test using the online tool and would like to reschedule or cancel your appointment, please visit: </p>
+                    <form action="/modify" method="get">
+                        <button class="btn btn-primary" type="submit">Modify an appointment</button>
+                    </form>
+                </div>
+              <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
+                    <h3>Available for Calgary, AB only</h3>
+                    <p>As of October 20, 2020 COVID-19 testing criteria has changed. Testing is available to:</p>
+                    <ul>
+                        <li>Albertans with symptoms of COVID-19;</li>
+                        <li>Albertans who are close contacts of a confirmed case, whether symptomatic or not; and,</li>
+                        <li>Albertans who are linked to a known outbreak, whether symptomatic or not.</li>
+                        <li>Albertans who need COVID-19 testing for outgoing travel (provided by Medical Labs for a fee).</li>
+                    </ul>
+                    <p>If you do not have symptoms and do not fall into the above list, you are not recommended for COVID-19 testing.</p>
+                    <p>Anyone who has symptoms is legally required to isolate and should be tested for COVID-19.</p>
+
+                    <form action="/login" method="get">
+                        <button class="btn btn-primary" type="submit">Book an online appointment</button>
+                    </form>
+              </div>
+          </div>
+        </div>
+{% endblock %}
